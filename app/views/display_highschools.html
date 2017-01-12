@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+ <meta charset="utf-8" />
+ <head></head>
+
+
+
+<body>
+
+
+<div id="highSchoolList" ng-controller="displayHighSchoolsController">
+ 
+ <h2> List of highschools</h2>
+     
+  <div class="row">
+                <div class="col-md-12">
+   
+   <table id="tableHighSchoolList">
+       <tr>
+        <td>Name</td>
+        
+    <td>City</td>-->
+   <td>Number of awards</td>
+    <td>Graduation rate</td>
+      <td>Phone number</td>
+       <td>Year of foundation</td>
+      </tr> 
+     <tr ng-repeat="highschool in HighSchools">
+         <td>{{highschool.highSchoolName}}</td>
+      
+  <td>{{highschool.highSchoolCity}}</td>
+         <td>{{highschool.numberOfAwards}}</td>
+          <td>{{highschool.graduationRate}}</td>
+            <td>{{highschool.highSchoolContact_phoneNumber}}</td>
+           <td>{{highschool.yearOfFoundation}}</td>
+        </tr>
+    </table>
+   </form>
+    </div>
+   
+    </div>
+</div>
+
+</body>
+</html>
+
+
+ 
+

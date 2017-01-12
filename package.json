@@ -1,0 +1,18 @@
+/*
+{
+  "name": "TehnWebProiect",
+  "main": "server.js",
+  "author": "Toader Adriana-Ioana",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql": "^2.12.0",
+    "nodeadmin": "^0.1.2",
+    "sequelize": "^3.28.0"
+    
+  }
+  
+
+}
+

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <meta charset="utf-8" />
+  <head></head>
+
+
+
+<body>
+
+
+
+<div id="newTeacher" ng-controller="newTeacherController">
+	
+	<h2>Add a new teacher: </h2>
+	<form>
+		<table>
+			<tr>
+				<td> Teacher`s full name:</td>
+				<td>
+					<input type="text" ng-model="teachers.teacherFullName">
+				</td>
+			</tr>
+			<tr>
+				<td> Does he/she tutor?:</td>
+				<td>
+					<input type="text" ng-model="teachers.isHeOrSheTutoring">
+				</td>
+			</tr>
+			<tr>
+				<td> Teacher`s adress:</td>
+				<td>
+					<input type="text" ng-model="teachers.teacherAdress">
+				</td>
+			</tr>
+			<tr>
+				<td> Number of teacher he/she tutors:</td>
+				<td>
+					<input type="text" ng-model="teachers.nrOfChildrenHeOrSheTutors">
+				</td>
+			</tr>
+				<tr>
+				<td> Number of teacher he/she can tutor:</td>
+				<td>
+					<input type="text" ng-model="teachers.nrOfChildrenHeOrSheCanTutor">
+				</td>
+			</tr>
+				<tr>
+				<td> Teacher`s email:</td>
+				<td>
+					<input type="text" ng-model="teachers.teacherEmail">
+				</td>
+			</tr>
+				<tr>
+				<td> Taught subject:</td>
+				<td>
+					<input type="text" ng-model="teachers.taughtSubject">
+				</td>
+			</tr>
+				<tr>
+				<td> Highschool name:</td>
+				<td>
+					<input type="text" ng-model="teachers.highSchoolName">
+				</td>
+			</tr>
+		</table>
+		<tr>
+			<td>
+				<input id="add" type="button" clas="button" value="Add a new teacher!" ng-click="newTeacher(teacher)">
+			</td>
+		</tr>
+	</form>
+
+
+	<script type="text/javascript">
+		document.getElementById("add").addEventListener("click", function() {
+			confirm("The teacher was successfully inserted into the DB!");
+		});
+	</script>
+</div>
+
+</body>
+</html>

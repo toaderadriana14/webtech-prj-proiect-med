@@ -1,0 +1,60 @@
+<!doctype html>
+ <meta charset="utf-8" />
+<html lang="en">
+
+<head>
+    <title>Tehnologii Web Proiect - Toader Adriana</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="myStyle.css" type="text/css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        
+       
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+        <script type="text/javascript" src="https://code.angularjs.org/1.5.6/angular-route.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers/displayHighSchoolsController.js"></script>
+    <script src="js/controllers/displayTeachersController.js"></script>
+    <script src="js/controllers/newHighSchoolController.js"></script>
+    <script src="js/controllers/newTeacherController.js"></script>
+
+</head>
+
+
+<body>
+   <div  ng-app="Tutoring">
+     
+    <h1>Find the best tutor for you/ ur child!</h1>
+    
+ <div class="col-md-3">
+<div class="row">
+
+        <ul>
+            <li><a ui-sref="about">About</a></li>
+            <li><a ui-sref="display_highschools">Display highschools</a></li>
+            <li><a ui-sref="display_teachers">Display teachers</a></li>
+            <li><a ui-sref="new_highschool">Add a new highschool</a></li>
+            <li><a ui-sref="new_teacher">Add a new teacher</a></li>
+            
+            
+        </ul>
+      </div>
+      <div class="col-md-9">
+               <div ui-view></div>
+                
+                
+                
+        </div>
+        
+     </div>
+     </div>
+           
+  
+
+                
+</body>
+</html>

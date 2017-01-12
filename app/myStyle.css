@@ -1,0 +1,249 @@
+div{
+  
+    width: 800px;
+   
+}
+
+
+h1{
+    color: #cc3333;
+	text-align:center;
+	float:left;
+    padding:4px;	
+    line-height:60px;
+    font-family:FangSong;
+    font-weight:bold;}
+
+h2{
+    color: #ff9900;
+	text-align:center;
+	float:left;
+    padding:4px;	
+    line-height:50px;
+    font-family:FangSong;
+    font-weight:bold;}
+
+h3{
+    color: #cd5c5c;
+	text-align:center;
+	float:left;
+    padding:4px;	
+    line-height:40px;
+    font-family:FangSong;
+     font-weight:bold;
+}
+    
+    h4{
+    color: #ff3333;
+	text-align:center;
+	float:left;
+    padding:4px;	
+    line-height:30px;
+    font-family:FangSong;
+         font-weight:bold;
+    }
+    
+
+
+ style{
+    color: #cc0066;
+	text-align:center;
+	float:left;
+    padding:4px;	
+    line-height:45px;
+    font-family:FangSong;
+         font-weight:bold;
+    }
+    
+body {
+    background-image:url('media/adr.jpg');
+    margin: 75px;
+  
+}
+
+header{
+	
+    text-align:left;
+    padding:30px;
+	font-size:100%;
+	margin:50px;
+	
+	
+}
+
+navigation 
+{
+    color: white;
+    height:415px;
+    width:415px;
+	text-align:center;
+	float:left;
+    padding:10px;	
+    line-height:25px;
+    margin:10px 10px 10px 10px;
+    font-family:FangSong;
+    
+        
+}
+
+navigation_wrapper
+{
+    
+margin: 0px 0px 0px 0px;
+width:1050;
+text-align:center;
+}
+
+
+navigation_menu ul
+{color: #fffacd;
+    list-style-type:none;
+   text-decoration: none;
+position:relative;
+border: 4px solid white;
+margin:20px 20px 20px 20px;
+}
+navigation_menu ul li 
+{
+ color: #fffacd;
+float:inherit;
+display: list-item;
+}
+#navigation_menu ul li:hover
+{
+background-color:Maroon;
+
+}
+navigation_menu ul li a: visited
+{
+color:black;
+display: block;
+padding:0;
+text-decoration:none;
+}
+
+navigation_menu ul li td a
+{
+color:#fffacd;
+display: block;
+padding:0;
+text-decoration:none;
+font-size:larger;
+font-style:oblique;
+font-family:FangSong;
+}
+
+
+
+
+add{
+   color:#fffacd;
+padding:5px;
+font-size:25px;
+font-weight:bold;
+height:65px;
+width:100px;
+margin:0px 20px 0 0px; 
+
+font-family:Berlin Sans FB;
+}
+
+newTeacher{
+    color:#fffacd;
+padding:5px;
+font-size:25px;
+font-weight:bold;
+height:65px;
+width:100px;
+margin:0px 20px 0 0px; 
+
+font-family:Berlin Sans FB;
+}
+
+newHighSchool{
+  color:#fffacd;
+padding:5px;
+font-size:25px;
+font-weight:bold;
+height:65px;
+width:100px;
+margin:0px 20px 0 0px; 
+
+font-family:Berlin Sans FB;
+}
+
+teacherList{
+      color:#fffacd;
+padding:5px;
+font-size:25px;
+font-weight:bold;
+height:65px;
+width:100px;
+margin:0px 20px 0 0px; 
+
+font-family:Berlin Sans FB;
+        
+}
+
+tableTeacherList{
+    border-style: outset;
+}
+
+tableTeacherList td{
+   color:#fffacd;
+padding:5px;
+font-size:25px;
+font-weight:bold;
+height:65px;
+width:100px;
+margin:0px 20px 0 0px; 
+ border-style: outset;
+ border-bottom: 2px solid black;
+font-family:Berlin Sans FB;
+}
+
+highSchoolList{
+        background: gray;
+        width: 400px;
+        padding: 40px;
+}
+
+tableHighSchoolList{
+    border-style: outset;
+}
+
+tableHighSchoolList td{
+   color:#fffacd;
+padding:5px;
+font-size:25px;
+font-weight:bold;
+height:65px;
+width:100px;
+margin:0px 20px 0 0px; 
+ border-style: outset;
+ border-bottom: 2px solid black;
+font-family:Berlin Sans FB;
+   
+}
+
+
+
+
+
+
+
+
+button
+{
+color:#7f0000;
+padding:3px;
+font-size:15px;
+
+height:45px;
+width:65px;
+
+margin-left: 300px;
+margin-top:50px;
+font-family:Berlin Sans FB;
+font-weight:bold;
+}

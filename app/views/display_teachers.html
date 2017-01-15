@@ -1,52 +1,54 @@
 <!doctype html>
 <html>
-    <meta charset="utf-8" />
-  <head></head>
+<meta charset="utf-8" />
 
-
-
-<body>
+<head></head>
 
 <div id="teacherList" ng-controller="displayTeachersController">
- 
-    
+    <select size="6" class="form-control" ng-model="teacher.highSchoolName" required>
+        <option ng-repeat="highschool in highschools" value="{{highschool.highSchoolName}}">{{highschool.highSchoolName}} from {{highschool.highSchoolCity}} has the graduation rate {{highschool.graduationRate}} "%."</option>
+	</select>
+    <br><br>
     <h2>List of teachers</h2>
-     <div class="row">
-                <div class="col-md-12">
-                    <div class="records_content">
-                     <form>
-   
-     
-    <table id="tableTeacherList">
-        <tr>
-         <td>Full name</td>
-         <td>Does she/he tutor?</td>
-         <td>Adress</td>
-         <td>How many children does he/she tutor?</td>
-         <td>How many children can he/she tutor</td>
-         <td>E-mail adress</td>
-         <td>Taught subject</td>
-         <td>Highschool name</td>
-        
-        </tr> 
-        <tr ng-repeat="teacher in Teachers">
-            <td>{{teacher.teacherFullName}</a></td>
-            <td>{{teacher.isHeOrSheTutoring}}</td>
-            <td>{{teacher.teacherAdress}}</td>
-            <td>{{teacher.nrOfChildrenHeOrSheTutorsn}}</td>
-            <td>{{teacher.nrOfChildrenHeOrSheCanTutor}}</td>
-            <td>{{teacher.teacherEmail}}</td>
-            <td>{{teacher.taughtSubject}}</td>
-            <td>{{teacher.highSchoolName}}</td>
-        
-        </tr>
-    </table>
-    </form>
-    
-    <button type="button" class="button" ng-click="readTeachers()">Display teachers</button>
-</div>
-</div>
-</div>
-</body>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="records_content">
+                <form>
 
+                    <div id="tableId">
+                        <table id="tableTeacherList">
+                            <tr>
+                                <td>Highschool name</td>
+                                <td>Full name</td>
+                                <td>Does she/he tutor?</td>
+                                <td>Adress</td>
+                                <td>How many children does he/she tutor?</td>
+                                <td>How many children can he/she tutor</td>
+                                <td>E-mail adress</td>
+                                <td>Taught subject</td>
+
+                            </tr>
+                            <tr ng-repeat="teacher in teachers">
+                                <td>{{teacher.HighSchoolHighSchoolName}}</td>
+                                <td>{{teacher.teacherFullName}}</a>
+                                </td>
+                                <td>{{teacher.isHeOrSheTutoring}}</td>
+                                <td>{{teacher.teacherAdress}}</td>
+                                <td>{{teacher.nrOfChildrenHeOrSheTutors}}</td>
+                                <td>{{teacher.nrOfChildrenHeOrSheCanTutor}}</td>
+                                <td>{{teacher.teacherEmail}}</td>
+                                <td>{{teacher.taughtSubject}}</td>
+                                <td>{{teacher.highSchoolName}}</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </form>
+            </div>
+
+            <left>
+                <button type="button" class="button" ng-click="readTeachers()">Display teachers</button>
+            </left>
+            
+        </div>
 </html>

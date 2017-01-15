@@ -1,25 +1,43 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var cors = require('cors');
-var Sequelize = require('sequelize');
-var models = require('./models');
-var sequelize = models.sequelize;
-
+var express = require("express");
+var bodyParser = require("body-parser");
+var cors = require("cors");
+var Sequelize = require("sequelize");
+var models = require("./models");
 
 
 var app = new express();
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static(__dirname + '/app'));
-//app.use(express.static('public'));
-
+app.use(express.static('app'));
 
 
 var nodeadmin = require('nodeadmin');
 app.use(nodeadmin(app));
+
+
+var sequelize = new Sequelize('meditatiidb', 'toaderadriana14', '', {
+  dialect: 'mysql',
+  port: 3306
+});
+
 app.listen(process.env.PORT);
 
+
+//metode rest 
+var licee = require(__dirname + "/routes/highschools.js");
+app.use(licee);
+
+var profesori = require(__dirname + "/routes/teachers.js");
+app.use(profesori);
+
+
+
+
+
+
+//var HighSchool = models.HighSchool;
+//app.use(express.static('public'));
 
 /*
 var sequelize = new Sequelize("meditatii-db", "root", "", {
@@ -76,17 +94,12 @@ Teacher.belongsTo(HighSchool,
 {foreignKey: 'highSchoolName'});
 
 */
-//metode rest 
-var licee = require(__dirname + "/routes/HighSchools.js");
-app.use(licee);
 
-var profesori =require(__dirname + "/routes/Teachers.js");
-app.use(profesori);
 
 
 //app.use(require("./routes/HighSchools.js"));
 //app.use(require("./routes/Teachers.js"));
-
+/*
 app.get('/create', (req, res) => {
     sequelize
         .sync({
@@ -100,9 +113,8 @@ app.get('/create', (req, res) => {
             res.status(500).send('error')
         })
 })
-
+*/
 
 
 
 //app.listen(8080);
-

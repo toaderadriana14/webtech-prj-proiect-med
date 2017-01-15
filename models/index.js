@@ -1,19 +1,13 @@
 "use strict";
 
-var fs        = require("fs");
-var path      = require("path");
+var fs = require("fs");
+var path = require("path");
 var Sequelize = require("sequelize");
-var config    = require(path.join(__dirname, '..', 'config', 'db.json'));
+var config = require(path.join(__dirname, '..', 'config', 'db'));
 
-//var sequelize = new Sequelize('meditatii-db', 'toaderadriana14', '', {
-//   dialect: 'mysql',
-//   port: 3306
-//});
-//
 var sequelize = new Sequelize(config.database, config.username, config.password, config);
-var db        = {};
+var db = {};
 
-var names= [];
 
 fs
   .readdirSync(__dirname)
@@ -22,8 +16,9 @@ fs
   })
   .forEach(function(file) {
     var model = sequelize.import(path.join(__dirname, file));
-    names.push(model);
+    db[model.name] = model;
   });
+
 
 Object.keys(db).forEach(function(modelName) {
   if ("associate" in db[modelName]) {
@@ -34,6 +29,12 @@ Object.keys(db).forEach(function(modelName) {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-db.names=names;
+
 module.exports = db;
 
+
+//var sequelize = new Sequelize('meditatii-db', 'toaderadriana14', '', {
+//   dialect: 'mysql',
+//   port: 3306
+//});
+//

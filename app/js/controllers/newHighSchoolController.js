@@ -1,32 +1,13 @@
 let ctrl = angular.module("newHighSchoolController", ['ui.router']);
 
-
-/*ctc.controller("newHighSchoolController", function($scope, $http, $state) {
-	$scope.newHighSchool = function(highschool) {
-		$http.post("/new_highschool", highschool)
-			.success(function() {
-				console.log("Hischool was inserted into the DB!");
-				$state.go($state.current, {}, {
-					reload: true
-				});
-			})
-			.error(function() {
-				console.log("Hischool couldn`t be inserted into the DB");
-			});
-	};
-});*/
-
-ctrl.controller('newHighSchoolController', ['$scope','$http', function($scope,$http) {
-    
-    
-    $scope.submitRecord=function(){
-        $http.post('/highschools',$scope.highschool).
+ctrl.controller('newHighSchoolController', ['$scope', '$http', function($scope, $http) {
+    $scope.highschools = {};
+    $scope.addANewHighSchool = function() {
+        $http.post('/highschools', $scope.highschools).
         success(function(data) {
-            console.log("posted successfully");
+            console.log("This highschoool was successfully inserted into the DB!");
         }).error(function(data) {
-            console.error("error in posting");
+            console.error("Oops! This highschoool wasn`t successfully inserted into the DB!");
         })
-        ;
-        $scope.highschool="";
-    };
+    }
 }]);

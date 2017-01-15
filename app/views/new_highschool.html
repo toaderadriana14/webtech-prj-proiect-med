@@ -1,71 +1,73 @@
 <!doctype html>
 <html>
-    <meta charset="utf-8" />
-  <head></head>
+<meta charset="utf-8" />
 
-
+<head></head>
 
 <body>
 
 
-<div id="newHighSchool" ng-controller="newHighSchoolController">
+	<div id="newHighSchool" ng-controller="newHighSchoolController">
 
-	
-	<h2>Add a new highschool: </h2>
-	<form>
-		<table>
-			<tr>
-				<td> Highschool name:</td>
-				<td>
-					<input type="text" ng-model="highschools.highSchoolName">
-				</td>
-			</tr>
-			<tr>
-				<td> Hihschool city:</td>
-				<td>
-					<input type="text" ng-model="highschools.highSchoolCity">
-				</td>
-			</tr>
-			<tr>
-				<td> Number of awards:</td>
-				<td>
-					<input type="text" ng-model="highschools.numberOfAwards">
-				</td>
-			</tr>
-			
-				<tr>
-				<td> Graduation rate:</td>
-				<td>
-					<input type="text" ng-model="highschools.graduationRate">
-				</td>
-			</tr>
-				<tr>
-				<td> Phone number:</td>
-				<td>
-					<input type="text" ng-model="highschools.highSchoolContact_phoneNumber">
-				</td>
-			</tr>
-				<tr>
-				<td> Year of foundation:</td>
-				<td>
-					<input type="text" ng-model="highschools.yearOfFoundation">
-				</td>
-			</tr>
-			
-		
-		</table>
-		<tr>
-			<td>
-				<input id="add" type="button" value="Insert a new highschool!" ng-click="newHighSchool">
-			</td>
-		</tr>
-	</form>
-	<script>
-		document.getElementById("add").addEventListener("click", function() {
-			confirm("Hishschool was successfully inserted into the DB!");
-		});
-	</script>
-	<button type="button" class="button" ng-click="submitRecord()" ng-disabled="new_highschoolForm.$invalid">Insert</button>
-</div>
+
+		<h2>Add a new highschool: </h2>
+		<form>
+			<table>
+				<form action="/highschools/" method="post" name="newHg">
+					<tr>
+						<td> Highschool name:</td>
+						<td>
+							<input type="text" class="form-control" id="highSchoolName" name="highSchoolName" ng-model="highschools.highSchoolName" required/>
+							<p><span ng-show="newHg.highSchoolName.$touched && newHg.highSchoolName.$invalid">The  name is, ofc, required!</span></p>
+
+						</td>
+					</tr>
+					<tr>
+						<td> Hihschool city:</td>
+						<td>
+							<input type="text" class="form-control" ng-model="highschools.highSchoolCity" required>
+						</td>
+					</tr>
+					<tr>
+						<td> Number of awards:</td>
+						<td>
+							<input type="text" ng-model="highschools.numberOfAwards">
+						</td>
+					</tr>
+
+					<tr>
+						<td> Graduation rate:</td>
+						<td>
+							<input type="text" ng-model="highschools.graduationRate">
+						</td>
+					</tr>
+					<tr>
+						<td> Phone number:</td>
+						<td>
+							<input type="text" ng-model="highschools.highSchoolContact_phoneNumber">
+						</td>
+					</tr>
+					<tr>
+						<td> Year of foundation:</td>
+						<td>
+							<input type="text" ng-model="highschools.yearOfFoundation">
+						</td>
+					</tr>
+
+
+			</table>
+
+			</form>
+			<script>
+				document.getElementById("add").addEventListener("click", function() {
+					confirm("Thanks for using our application!");
+				});
+			</script>
+
+		<button type="button btn-info" class="button" id="add" ng-click="addANewHighSchool()" ng-disabled="new_highschoolForm.$invalid">
+			Insert highschool!
+		</button>
+	</div>
 </body>
+
 </html>

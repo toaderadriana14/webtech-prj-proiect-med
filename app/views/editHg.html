@@ -1,0 +1,40 @@
+<div>
+
+    <div id="formTeacher">
+
+        <label for="teacherId">Highschool where he/she teaches:</label>
+        <select class="form-control" id="hgId" ng-model="teachers.HighSchoolHighSchoolName" required>
+			<option ng-repeat="highschool in highschools" value="{{highschool.highSchoolName}}">{{highschool.highSchoolName}}</option>
+		</select>
+
+        <!--<input type="text" class="form-control" id="HighSchoolHighSchoolName" name="HighSchoolHighSchoolName" /> -->
+        <label for="teacherFullName">His/her name:</label>
+        <input type="text" class="form-control" id="teacherFullName" name="teacherFullName" ng-model="teachers.teacherFullName" required/>
+
+        <label for=" isHeOrSheTutoring">Does he/she tutor?</label>
+        <select class="form-control" id="isHeOrSheTutoring" name="isHeOrSheTutoring" ng-model="teachers.isHeOrSheTutoring">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</select>
+
+        <label for="teacherAdress">His/her adress:</label>
+        <textarea class="form-control" id="teacherAdress" name="teacherAdress" ng-model="teachers.teacherAdress"></textarea>
+
+        <label for="nrOfChildrenHeOrSheTutors">How many children does he/she tutor?</label>
+        <textarea class="form-control" id="nrOfChildrenHeOrSheTutors" name="nrOfChildrenHeOrSheTutors" ng-model="teachers.nrOfChildrenHeOrSheTutors"></textarea>
+
+        <label for="nrOfChildrenHeOrSheCanTutor">How many children can he/she tutor?</label>
+        <textarea class="form-control" id="nrOfChildrenHeOrSheCanTutor" name="nrOfChildrenHeOrSheCanTutor" ng-model="teachers.nrOfChildrenHeOrSheCanTutor"></textarea>
+
+        <label for="teacherEmail">His/her e-mail adress:</label>
+        <textarea class="form-control" id="teacherEmail" name="teacherEmail" ng-model="teachers.teacherEmail"></textarea>
+
+        <label for="taughtSubject">Taught subject:</label>
+        <textarea class="form-control" id="taughtSubject" name="taughtSubject" ng-model="teachers.taughtSubject"></textarea>
+
+        <!--   <input type="submit" ng-click="newTeacher()" value="Insert a new teacher" /> -->
+        <button type="button" class="button" id="butto1" ng-click="newTeacher()">Insert teacher</button>
+
+    </div>
+
+</div>

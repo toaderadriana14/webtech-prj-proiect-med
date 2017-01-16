@@ -1,0 +1,32 @@
+<div>
+    <center>
+        <h2>Select a teacher</h2>
+    </center>
+
+    <select size="6" class="form-control" ng-model="highschool.highSchoolName" required>
+    <option ng-repeat="highschool in highschools"
+        value="{{highschool.highSchoolName}}">{{highschool.highSchoolName}} from
+        {{highschool.highSchoolCity}} has received {{highschool.numberOfAwards}} awards
+        and has the graduation rate {{highschool.graduationRate}} %.</option>
+	</select>
+
+    <p ng-show=showParagraph ng-model="highschool.highSchoolName">
+        E-mail: ={{highschool.highSchoolContact_phoneNumber }} , Adress: {{highschool.yearOfFoundation}}
+    </p>
+</div>
+
+
+<right>
+    <button ng-click="deleteHighSchool()" customAlert>Delete this highschool<span class="glyphicon glyphicon-remove"></span></button>
+</right>
+<right>
+    <button id="message">Click here!</button>
+</right>
+
+<script>
+    document.getElementById("message").addEventListener("click", function() {
+        confirm("We hope you`ve found the tutor you  were looking for!");
+    });
+</script>
+
+</div>

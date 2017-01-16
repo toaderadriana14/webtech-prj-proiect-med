@@ -1,0 +1,33 @@
+<div id="TeacherModify">
+    <h2>Modify a teacher</h2>
+    <table id="teachers" class="tableHighSchoolList">
+
+        <tr>
+            <th>Highschool name</th>
+            <th>Name</th>
+            <th>Is a tutor?</th>
+            <th>Adress</th>
+            <th>No. of kids teacher tutors</th>
+            <th>No. of kids teacher can tutor</th>
+            <th>E-mail</th>
+            <th>Taught subject</th>
+        </tr>
+
+        <tr ng-repeat="teacher in teachers">
+            <td>{{teacher.HighSchoolHighSchoolName}}</td>
+            <td>{{teacher.teacherFullName}}</td>
+            <td>{{teacher.isHeOrSheTutoring}}</td>
+            <td contenteditable ng-model="teacher">{{teacher.teacherAdress}}</td>
+            <td>{{teacher.nrOfChildrenHeOrSheTutors}}</td>
+            <td>{{teacher.nrOfChildrenHeOrSheCanTutor}}</td>
+            <td>{{teacher.teacherEmail}}</td>
+            <td>{{teacher.taughtSubject}}</td>
+            <td>
+                <button class="button" type="button" style="" ng-click="update(this)">
+                 Modify this adress 
+            </button>
+            </td>
+        </tr>
+
+    </table>
+</div>
